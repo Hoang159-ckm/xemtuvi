@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lá Số | Khám phá bản thân</title>
+  <meta name="description" content="Nhập ngày sinh để khám phá bản luận giải tử vi cá nhân.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Lá Số - Trang chủ">
+        <span class="brand-mark">✦</span>
+        <span>LÁ SỐ</span>
+      </a>
+      <nav class="nav-links" aria-label="Điều hướng chính">
+        <a href="#tra-cuu">Tra cứu</a>
+        <a href="#ve-la-so">Về Lá Số</a>
+      </nav>
+      <span class="live-pill"><span class="live-dot"></span> Trải nghiệm cá nhân</span>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">BẢN ĐỒ CỦA BẠN</p>
+          <h1 id="hero-title">Mỗi ngày sinh<br><em>một câu chuyện.</em></h1>
+          <p class="hero-intro">Lắng nghe những tín hiệu nhỏ từ vũ trụ. Khám phá bản thân qua ngày bạn bắt đầu hành trình này.</p>
+          <div class="hero-note"><span>✧</span> Luận giải riêng theo thông tin của bạn</div>
+        </div>
+        <div class="hero-orbit" aria-hidden="true">
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="star star-one">✦</div>
+          <div class="star star-two">✧</div>
+          <div class="star star-three">✦</div>
+          <div class="moon">☾</div>
+          <div class="orbit-label label-top">YOUR<br>STORY</div>
+          <div class="orbit-label label-bottom">BORN TO<br>BE SEEN</div>
+        </div>
+      </section>
+
+      <section class="lookup-section" id="tra-cuu" aria-labelledby="lookup-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">BƯỚC 01 / 02</p>
+            <h2 id="lookup-title">Bắt đầu từ ngày sinh</h2>
+          </div>
+          <p class="heading-aside">Thông tin của bạn được dùng để tạo nên<br>một bản đọc mang tính riêng tư.</p>
+        </div>
+
+        <form class="birth-form" id="birth-form">
+          <div class="form-grid">
+            <label class="field field-date">
+              <span>Ngày sinh <b>*</b></span>
+              <input id="birth-date" name="birthDate" type="date" required>
+              <small>Ngày / tháng / năm</small>
+            </label>
+            <label class="field">
+              <span>Giờ sinh <i>(không bắt buộc)</i></span>
+              <input id="birth-time" name="birthTime" type="time">
+              <small>Giờ địa phương</small>
+            </label>
+            <label class="field">
+              <span>Bạn muốn được gọi là</span>
+              <select id="gender" name="gender">
+                <option value="neutral">Tôi</option>
+                <option value="female">Nữ</option>
+                <option value="male">Nam</option>
+                <option value="other">Khác</option>
+              </select>
+              <small>Chọn điều khiến bạn thấy thoải mái</small>
+            </label>
+            <label class="field birth-place-field">
+              <span>Nơi sinh <i>(không bắt buộc)</i></span>
+              <input id="birth-place" name="birthPlace" type="text" placeholder="Thành phố / tỉnh">
+              <small>Dùng để cá nhân hóa bản đồ sao</small>
+            </label>
+          </div>
+          <div class="form-footer">
+            <p class="privacy-note"><span>♧</span> Dữ liệu chỉ nằm trên trình duyệt của bạn.</p>
+            <button class="primary-button" type="submit">Xem bản đồ của tôi <span>↗</span></button>
+          </div>
+          <p class="form-error" id="form-error" role="alert" hidden>Vui lòng chọn ngày sinh hợp lệ.</p>
+        </form>
+      </section>
+
+      <section class="result-section" id="result-section" aria-live="polite" hidden>
+        <div class="result-heading">
+          <div>
+            <p class="eyebrow">BƯỚC 02 / 02 · BẢN ĐỌC CỦA BẠN</p>
+            <h2 id="result-title">Một bầu trời riêng</h2>
+          </div>
+          <button class="text-button" id="reset-button" type="button">Đổi ngày sinh <span>↗</span></button>
+        </div>
+        <div class="result-grid">
+          <article class="result-card main-card">
+            <div class="card-kicker">CUNG MẶT TRỜI</div>
+            <div class="zodiac-symbol" id="zodiac-symbol">♈</div>
+            <h3 id="zodiac-name">Bạch Dương</h3>
+            <p id="zodiac-date">21/03 — 19/04</p>
+            <div class="card-rule"></div>
+            <p id="zodiac-reading">Một nguồn năng lượng tiên phong, thẳng thắn và luôn sẵn sàng mở lối.</p>
+          </article>
+          <article class="result-card stat-card">
+            <div class="card-kicker">CON SỐ ĐƯỜNG ĐỜI</div>
+            <div class="life-number" id="life-number">7</div>
+            <h3>Người tìm kiếm</h3>
+            <p>Trực giác sâu sắc, yêu sự thật và luôn muốn hiểu điều nằm sau bề mặt.</p>
+          </article>
+          <article class="result-card insight-card">
+            <div class="card-kicker">GỢI Ý HÔM NAY</div>
+            <p class="quote">“Bạn không cần nhìn thấy toàn bộ con đường để bước đi bước đầu tiên.”</p>
+            <div class="insight-meta"><span>✦</span> Tập trung vào điều đang ở trước mắt</div>
+          </article>
+        </div>
+        <p class="disclaimer">Bản đọc mang tính chiêm nghiệm và giải trí, là một lời mời để bạn lắng nghe chính mình.</p>
+
+        <div class="extra-readings locked-content" id="extra-readings">
+          <div class="section-heading reading-heading">
+            <div>
+              <p class="eyebrow">KHÁM PHÁ THÊM</p>
+              <h2>Ba góc nhìn<br><em>cho một hành trình.</em></h2>
+            </div>
+            <p class="heading-aside">Những biểu tượng để bạn soi chiếu<br>và đặt thêm câu hỏi cho chính mình.</p>
+          </div>
+          <div class="extra-grid">
+            <article class="extra-card star-map-card">
+              <div class="card-kicker">BẢN ĐỒ SAO KHÁI QUÁT</div>
+              <div class="extra-icon">✺</div>
+              <h3 id="star-map-title">Bầu trời của bạn</h3>
+              <p id="star-map-reading">Mặt trời dẫn đường bằng sự tự tin. Mặt trăng nhắc bạn chăm sóc thế giới bên trong.</p>
+              <div class="placement-list">
+                <span id="sun-placement">Mặt trời · Bạch Dương</span>
+                <span id="moon-placement">Mặt trăng · Nước</span>
+                <span id="rising-placement">Cung mọc · đang mở</span>
+              </div>
+            </article>
+            <article class="extra-card tai-card">
+              <div class="card-kicker">TAM TAI · <span id="tai-year">2026</span></div>
+              <div class="extra-icon">◌</div>
+              <h3 id="tai-title">Một năm bình hòa</h3>
+              <p id="tai-reading">Không nằm trong nhóm tam tai năm nay. Đây là lúc giữ nhịp ổn định và vun bồi điều quan trọng.</p>
+              <div class="year-track"><span>Tuổi của bạn</span><strong id="animal-sign">—</strong></div>
+            </article>
+            <article class="extra-card hexagram-card">
+              <div class="card-kicker">RÚT QUẺ CHIÊM NGHIỆM</div>
+              <div class="hexagram" id="hexagram-lines" aria-label="Hình quẻ"></div>
+              <h3 id="hexagram-name">Quẻ Khởi đầu</h3>
+              <p id="hexagram-reading">Hãy đặt một câu hỏi trong lòng. Câu trả lời tốt nhất thường bắt đầu từ một bước chân nhỏ.</p>
+              <button class="text-button draw-again" id="draw-again" type="button">Rút lại quẻ <span>↗</span></button>
+            </article>
+          </div>
+          <div class="unlock-panel" id="unlock-panel">
+            <div class="unlock-icon">✦</div>
+            <div>
+              <strong>Mở khóa bản đọc đầy đủ</strong>
+              <p>Tiếp tục để xem bản đồ sao, tam tai và quẻ chi tiết của bạn.</p>
+            </div>
+            <button class="primary-button unlock-button" id="unlock-button" type="button">Nạp 50.000đ để xem tiếp <span>↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section" id="ve-la-so">
+        <p class="eyebrow">MỘT KHOẢNG DỪNG NHỎ</p>
+        <h2>Không phải để đoán tương lai.<br><em>Để hiểu hiện tại hơn.</em></h2>
+      </section>
+    </main>
+
+    <footer class="footer"><span>© 2026 LÁ SỐ</span><span>Made for curious souls</span></footer>
+  </div>
+  <div class="payment-modal" id="payment-modal" role="dialog" aria-modal="true" aria-labelledby="payment-title" hidden>
+    <div class="payment-backdrop" data-close-payment></div>
+    <div class="payment-box">
+      <button class="modal-close" id="close-payment" type="button" aria-label="Đóng cửa sổ thanh toán">×</button>
+      <p class="eyebrow">MỞ KHÓA BẢN ĐỌC</p>
+      <h2 id="payment-title">Nạp 50.000đ</h2>
+      <p class="payment-copy">Quét mã QR bên dưới và nhập mã giao dịch sau khi chuyển khoản thành công.</p>
+      <img class="payment-qr-image" src="QR.png" alt="Mã QR Vietcombank để thanh toán 50.000 đồng">
+      <div class="payment-summary"><span>Gói bản đọc đầy đủ</span><strong>50.000đ</strong></div>
+      <label class="transaction-field" for="transaction-code">Mã giao dịch</label>
+      <input class="transaction-input" id="transaction-code" type="text" placeholder="Ví dụ: FT123456789" autocomplete="off">
+      <button class="primary-button payment-success" id="payment-success" type="button">Kiểm tra thanh toán <span>✓</span></button>
+      <p class="payment-status" id="payment-status" role="status" hidden></p>
+      <small class="payment-note">Hệ thống chỉ mở nội dung sau khi máy chủ xác nhận đã nhận đủ 50.000đ.</small>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
